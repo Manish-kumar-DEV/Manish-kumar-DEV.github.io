@@ -1,0 +1,241 @@
+body {
+  font-family: "Open Sans", sans-serif;
+  color: rgb(58, 55, 55);
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Poppins";
+}
+
+/* Mobile Top Nav Bar */
+.container-fluid > .navbar {
+  margin: 0px -15px;
+  background-color: #031022;
+}
+
+.navbar-toggler {
+  background-color: white;
+}
+
+/* Side Nav Bar */
+#sideNavBar {
+  background-color: #031022;
+  height: 100vh;
+  position: fixed;
+  z-index: 1;
+}
+
+.navbar-nav i,
+.navbar-nav a {
+  color: rgba(255, 255, 255, 0.712) !important;
+}
+
+.navbar-nav li:hover i {
+  color: #506aff !important;
+}
+
+.navbar-nav li:hover a {
+  color: white !important;
+}
+
+/* Profile Section */
+
+#profileSection > .row {
+  background: linear-gradient(
+      rgba(86, 58, 250, 0.9) 0%,
+      rgba(116, 15, 214, 0.9) 100%
+    ),
+    url("/resources/profile-bg.jpg");
+  background-size: cover;
+  padding: 100px 0px;
+}
+
+#profileSection .profileTitle {
+  margin: 60px 0px;
+}
+
+#profileSection h1 {
+  font-size: 62px;
+}
+
+.highlightedText {
+  position: relative;
+  z-index: 3;
+}
+
+.highlightedText:after {
+  background-color: #06177c;
+  content: " ";
+  height: 20%;
+  position: absolute;
+  left: 0;
+  top: 55%;
+  margin-left: -5px;
+  width: 100%;
+  z-index: -1;
+}
+
+.changingRolesDiv {
+  position: relative;
+}
+
+.aboutDiv {
+  font-size: 17px;
+  font-family: "Roboto";
+}
+
+.profileButtons {
+  position: relative;
+}
+
+@media only screen and (max-width: 1025px) {
+  .changingRolesDiv {
+    white-space: nowrap;
+    left: 25px;
+  }
+}
+
+@media only screen and (max-width: 769px) {
+  .changingRolesDiv {
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 426px) {
+  .changingRolesDiv {
+    white-space: pre-wrap;
+    min-height: 185px;
+  }
+}
+
+/* Skills Div */
+
+#skills {
+  min-height: 100vh;
+}
+
+.skillsTitle > h1 {
+  font-weight: 700;
+  position: relative;
+  width: fit-content;
+}
+
+.skillsTitle > h1:after {
+  background-color: #506aff;
+  content: " ";
+  height: 20%;
+  position: absolute;
+  left: -5px;
+  top: 55%;
+  width: calc(100% + 10px);
+  z-index: -1;
+}
+
+.skillImages {
+  padding: 20px;
+}
+
+.skillImages:hover {
+  padding: 0;
+  opacity: 1;
+}
+
+/* Proficiencies Div */
+#proficiencies {
+  min-height: 60vh;
+  /* background-color: #b7c2ff; */
+  background-color: #7e2cde;
+  background-color: #684bf9;
+}
+
+.proficienciesTitle > h1 {
+  color: white;
+  font-weight: 700;
+  position: relative;
+  width: fit-content;
+  z-index: 3;
+}
+
+.proficienciesTitle > h1:after {
+  background-color: #06177c;
+  content: " ";
+  height: 20%;
+  position: absolute;
+  left: -5px;
+  top: 55%;
+  width: calc(100% + 10px);
+  z-index: -1;
+}
+
+#proficiencies h4 {
+  font-weight: 600;
+  font-family: "Poppins";
+}
+
+/* Project Div */
+#project {
+  min-height: 100vh;
+}
+
+.projectTitle > h1 {
+  font-weight: 700;
+  position: relative;
+  width: fit-content;
+}
+
+.projectTitle > h1:after {
+  background-color: #506aff;
+  content: " ";
+  height: 20%;
+  position: absolute;
+  left: -5px;
+  top: 55%;
+  width: calc(100% + 10px);
+  z-index: -1;
+}
+
+#project .card .card-title {
+  font-size: 35px;
+  font-weight: 600;
+}
+
+#project .card:hover {
+  border: 2px solid #06177c;
+  box-shadow: 11px 11px 30px #c7c7c7, -11px -11px 30px #ffffff;
+}
+
+#project .card:hover .card-title {
+  color: white;
+}
+
+#project .card:hover > .card-body {
+  animation: 0.3s linear animateCardBackground;
+  background-color: rgba(80, 106, 255, 0.8);
+  display: inline-block;
+}
+
+@keyframes animateCardBackground {
+  from {
+    background-color: transparent;
+  }
+  to {
+    background-color: rgba(80, 106, 255, 0.8);
+  }
+}
+
+/* Contact Footer */
+#contact {
+  background: url("/resources/footer-bg.png");
+  min-height: 20vh;
+  color: black;
+}
+
+.contactIcons {
+  font-size: 30px;
+}
+
+.contactIcons:hover {
+  color: white;
+}
