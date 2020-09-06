@@ -1,6 +1,22 @@
+* {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", sans-serif;
   color: rgb(58, 55, 55);
+}
+
+body::-webkit-scrollbar {
+  width: 10px;
+}
+
+body::-webkit-scrollbar-track {
+  background-color: #a2b0ff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: blue;
 }
 
 h1,
@@ -90,6 +106,14 @@ h3 {
   position: relative;
 }
 
+.contactInProfileSection {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: fit-content;
+  text-align: left;
+}
+
 @media only screen and (max-width: 1025px) {
   .changingRolesDiv {
     white-space: nowrap;
@@ -134,17 +158,24 @@ h3 {
 }
 
 .skillImages {
-  padding: 20px;
+  padding: 30px;
 }
 
 .skillImages:hover {
-  padding: 0;
+  transition: 0.3s;
+  padding: 0px;
   opacity: 1;
+}
+
+.skillImages > div {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Poppins";
 }
 
 /* Proficiencies Div */
 #proficiencies {
-  min-height: 60vh;
+  min-height: 80vh;
   /* background-color: #b7c2ff; */
   background-color: #7e2cde;
   background-color: #684bf9;
@@ -172,6 +203,7 @@ h3 {
 #proficiencies h4 {
   font-weight: 600;
   font-family: "Poppins";
+  color: white;
 }
 
 /* Project Div */
@@ -202,7 +234,8 @@ h3 {
 }
 
 #project .card:hover {
-  border: 2px solid #06177c;
+  transition: 0.5s;
+  border: none;
   box-shadow: 11px 11px 30px #c7c7c7, -11px -11px 30px #ffffff;
 }
 
@@ -211,9 +244,31 @@ h3 {
 }
 
 #project .card:hover > .card-body {
-  animation: 0.3s linear animateCardBackground;
+  animation: 0.5s linear animateCardBackground;
   background-color: rgba(80, 106, 255, 0.8);
-  display: inline-block;
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+#project .card-body {
+  position: relative;
+}
+
+.link {
+  position: absolute;
+  right: 0;
+  top: 5px;
+}
+
+#project .card-body div:nth-last-child(1) {
+  position: absolute;
+  bottom: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#project .card-body img {
+  width: 30px;
 }
 
 @keyframes animateCardBackground {
@@ -225,10 +280,46 @@ h3 {
   }
 }
 
+/* Stats */
+.statisticsTitle > h1 {
+  font-weight: 700;
+  position: relative;
+  width: fit-content;
+}
+
+.statisticsTitle > h1::after {
+  background-color: #506aff;
+  content: " ";
+  height: 20%;
+  position: absolute;
+  left: -5px;
+  top: 55%;
+  width: calc(100% + 10px);
+  z-index: -1;
+}
+
+.individualStat {
+  width: 140px;
+  text-align: center;
+}
+
+.individualStat > div:nth-child(1) {
+  margin: auto;
+  font-size: 28px;
+  font-weight: 600;
+  height: 130px;
+  width: 130px;
+  border: 10px solid #506aff;
+  border-radius: 65px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 /* Contact Footer */
 #contact {
-  background: url("/resources/footer-bg.png");
-  min-height: 20vh;
+  background: url("/resources/footer.png");
+  min-height: 22vh;
   color: black;
 }
 
@@ -238,4 +329,5 @@ h3 {
 
 .contactIcons:hover {
   color: white;
+  cursor: pointer;
 }
