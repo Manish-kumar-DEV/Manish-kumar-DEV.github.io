@@ -264,8 +264,9 @@ h3 {
   top: 5px;
 }
 
-#project .card-body div:nth-last-child(1) {
+#project .card-body .card-stacks {
   position: absolute;
+  text-align: center;
   bottom: 5px;
   left: 50%;
   transform: translateX(-50%);
@@ -273,6 +274,15 @@ h3 {
 
 #project .card-body img {
   width: 30px;
+}
+
+.card-links {
+  display: flex;
+  justify-content: center;
+}
+
+.card-links .btn {
+  margin: 4px;
 }
 
 @keyframes animateCardBackground {
